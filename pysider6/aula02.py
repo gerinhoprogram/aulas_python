@@ -53,5 +53,6 @@ primeira_acao.triggered.connect(  # type:ignore
 )
 
 
+
 window.show()
 app.exec()  # O loop da aplicação
