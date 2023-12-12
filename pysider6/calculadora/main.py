@@ -5,10 +5,13 @@ from main_window import MainWindow
 from PySide6.QtGui import QIcon
 from PySide6.QtWidgets import QApplication, QLabel
 from variaveis import WINDOW_ICON_PATH
+from style import setupTheme
 
 
 if __name__ == '__main__':
     app = QApplication(sys.argv)
+
+    setupTheme()
 
     window = MainWindow()
 
