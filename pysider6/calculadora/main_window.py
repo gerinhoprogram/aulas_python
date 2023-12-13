@@ -1,6 +1,4 @@
-from typing import Optional
-import PySide6.QtCore
-from PySide6.QtWidgets import (QApplication, QLabel, QMainWindow, QVBoxLayout, QWidget)
+from PySide6.QtWidgets import (QMainWindow, QVBoxLayout, QWidget)
 
 class MainWindow(QMainWindow):
     def __init__(self, parent: QWidget | None = None, *args, **kwargs) -> None:
