@@ -14,7 +14,18 @@ from buttons import ButtonsGrid
 if __name__ == '__main__':
     app = QApplication(sys.argv)
 
-    apply_stylesheet(app, theme='dark_teal.xml')
+    extra = {
+
+        # Button colors
+        'danger': '#dc3545',
+        'warning': '#ffc107',
+        'success': '#17a2b8',
+
+        # Font
+        'font_family': 'Roboto',
+    }
+
+    apply_stylesheet(app, theme='dark_teal.xml', invert_secondary=True, extra=extra)
 
     window = MainWindow()
 
@@ -35,7 +46,7 @@ if __name__ == '__main__':
     window.addWidgetToVLayout(display)
 
     #grid
-    buttonsGrid = ButtonsGrid()
+    buttonsGrid = ButtonsGrid(display)
     window.v_layout.addLayout(buttonsGrid)
 
     #button
