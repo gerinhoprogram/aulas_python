@@ -62,13 +62,12 @@ class ButtonsGrid(QGridLayout):
                 button.clicked.connect(buttonSlot)
 
     def marca_botao_display(self, func, *args, **kwargs):
-        def realSolt(checked):
-            func(checked, *args, **kwargs)
-        return realSolt
+        @Slot(bool)
+        def realSlot(_):
+            func(*args, **kwargs)
+        return realSlot
 
-    def inseri_texto_display(self, checked, button):
+    def inseri_texto_display(self, button):
         # self.display.setText('Clicked')
-        texto_botao = list()
-        texto_botao = button.text()
-        self.display.insert('texto_botao')
-        print(texto_botao, checked)
+        button_text = button.text()
+        self.insert(button_text)

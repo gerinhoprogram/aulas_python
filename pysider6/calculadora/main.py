@@ -1,14 +1,14 @@
 import sys
 
+from buttons import Button, ButtonsGrid
+from buttons import ButtonsGrid
 from display import Display
-from main_window import MainWindow
 from info import Info
+from main_window import MainWindow
 from PySide6.QtGui import QIcon
-from PySide6.QtWidgets import QApplication, QLabel
+from PySide6.QtWidgets import QApplication
 from variaveis import WINDOW_ICON_PATH
 from qt_material import apply_stylesheet
-from buttons import Button
-from buttons import ButtonsGrid
 
 
 if __name__ == '__main__':
