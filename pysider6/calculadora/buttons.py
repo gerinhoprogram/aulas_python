@@ -70,4 +70,4 @@ class ButtonsGrid(QGridLayout):
     def inseri_texto_display(self, button):
         # self.display.setText('Clicked')
         button_text = button.text()
-        self.insert(button_text)
+        self.display.insert(button_text)

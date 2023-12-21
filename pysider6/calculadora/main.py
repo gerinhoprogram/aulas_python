@@ -1,6 +1,5 @@
 import sys
 
-from buttons import Button, ButtonsGrid
 from buttons import ButtonsGrid
 from display import Display
 from info import Info
@@ -46,6 +45,7 @@ if __name__ == '__main__':
     window.addWidgetToVLayout(display)
 
     #grid
+    # buttonsGrid = ButtonsGrid()
     buttonsGrid = ButtonsGrid(display)
     window.v_layout.addLayout(buttonsGrid)
 
